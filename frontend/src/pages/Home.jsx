@@ -88,7 +88,7 @@ const Home = () => {
                 Certified Organic
               </h3>
               <p className="text-text-secondary text-sm leading-relaxed max-w-xs font-light">
-                USDA / NPOP certified. Sourced from certified farms and tested
+                EU Organic / USDA / NPOP certified. Sourced from certified farms and tested
                 for contaminants — no pesticides, additives, or artificial
                 colors.
               </p>

@@ -9,6 +9,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import FounderFAQs from "./pages/FounderFAQs";
+import OrganicCertificationGuide from "./pages/OrganicCertificationGuide";
 import WhySiraba from "./pages/WhySiraba";
 import Blog from "./pages/Blog";
 import Certification from "./pages/Certification";
@@ -46,6 +48,12 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import VendorShopPage from "./pages/VendorShopPage";
 import VendorIntro from "./pages/vendor/VendorIntro";
+import VendorBenefits from "./pages/vendor/VendorBenefits";
+import VendorOnboardingGuide from "./pages/vendor/VendorOnboardingGuide";
+import VendorOnboardingChecklist from "./pages/vendor/VendorOnboardingChecklist";
+import VendorVerificationPolicies from "./pages/vendor/VendorVerificationPolicies";
+import VendorTermsAndConditions from "./pages/vendor/VendorTermsAndConditions";
+import VendorFAQ from "./pages/vendor/VendorFAQ";
 import SirabaAssistant from "./components/SirabaAssistant";
 import { SocketProvider } from "./context/SocketContext";
 import { CurrencyProvider } from "./context/CurrencyContext";
@@ -55,14 +63,14 @@ import { ConfirmProvider } from "./components/ConfirmModal";
 const FooterWrapper = () => {
   const location = useLocation();
   const isAdmin = location.pathname.startsWith("/admin");
-  const isVendor = location.pathname.startsWith("/vendor");
-  return !isAdmin && !isVendor ? <Footer /> : null;
+  const isVendorPortal = location.pathname === "/vendor" || location.pathname.startsWith("/vendor/");
+  return !isAdmin && !isVendorPortal ? <Footer /> : null;
 };
 
 const NavbarWrapper = () => {
   const location = useLocation();
-  const isVendor = location.pathname.startsWith("/vendor");
-  return !isVendor ? <Navbar /> : null;
+  const isVendorPortal = location.pathname === "/vendor" || location.pathname.startsWith("/vendor/");
+  return !isVendorPortal ? <Navbar /> : null;
 };
 
 function App() {
@@ -96,6 +104,14 @@ function App() {
                               <Route path="/our-story" element={<About />} />
                               <Route path="/about" element={<About />} />
                               <Route path="/about-us" element={<About />} />
+                              <Route
+                                path="/founder-faqs"
+                                element={<FounderFAQs />}
+                              />
+                              <Route
+                                path="/organic-certification-guide"
+                                element={<OrganicCertificationGuide />}
+                              />
                               <Route
                                 path="/why-siraba"
                                 element={<WhySiraba />}
@@ -198,6 +214,30 @@ function App() {
                               <Route
                                 path="/vendor/subscription"
                                 element={<VendorSubscription />}
+                              />
+                              <Route
+                                path="/vendor-benefits"
+                                element={<VendorBenefits />}
+                              />
+                              <Route
+                                path="/vendor-onboarding-guide"
+                                element={<VendorOnboardingGuide />}
+                              />
+                              <Route
+                                path="/vendor-onboarding-checklist"
+                                element={<VendorOnboardingChecklist />}
+                              />
+                              <Route
+                                path="/vendor-verification-policies"
+                                element={<VendorVerificationPolicies />}
+                              />
+                              <Route
+                                path="/vendor-terms-and-conditions"
+                                element={<VendorTermsAndConditions />}
+                              />
+                              <Route
+                                path="/vendor-faq"
+                                element={<VendorFAQ />}
                               />
 
                               {/* Placeholder Routes - To be implemented */}
