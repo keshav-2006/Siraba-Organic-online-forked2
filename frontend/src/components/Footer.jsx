@@ -21,8 +21,8 @@ const Footer = () => {
                   Organic
                 </span>
                 <p className="text-surface text-[0.65rem] leading-relaxed font-light">
-                Certified • Verified • Qualified
-                </p> 
+                  Certified • Verified • Qualified
+                </p>
               </div>
             </div>
             <p className="text-white/60 text-sm leading-relaxed font-light">
@@ -183,7 +183,7 @@ const Footer = () => {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-xs text-white/60 font-light space-y-1 text-center md:text-left">
-            <p>© 2026 Siraba Organic. All rights reserved. | Business Name: Siraba Organic | GSTIN: 06ACMPT6127H1ZA | URN: UDYAM-HR-05-0179395</p>
+            <p>© 2026 Siraba Organic. All rights reserved. | Business Name: Siraba Organic | GSTIN: 06ACMPT6127H1ZA | URN: UDYAM-HR-05-0179395 | IEC Code: ACMPT6127H</p>
           </div>
         </div>
       </div>
